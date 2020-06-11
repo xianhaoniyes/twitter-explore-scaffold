@@ -1,0 +1,19 @@
+.getin {
+  @extend .in;
+  .forget {
+    color: $primary-color;
+  }
+  .login {
+    @include btn-variant($primary-color, $body-bg, $primary-color, 350px);
+    align-self: center;
+  }
+
+  .centerwords {
+    align-self: center;
+  }
+
+  .register {
+    @include btn-variant($white, $primary-color, $primary-color, 350px);
+    align-self: center;
+  }
+}

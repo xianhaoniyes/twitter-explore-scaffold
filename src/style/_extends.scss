@@ -1,0 +1,27 @@
+.menu {
+  > ul {
+    display: flex;
+    > li {
+      margin-right: 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+.in {
+  display: flex;
+  flex-direction: column;
+  border: solid $border-color;
+  border-width: thin;
+  border-radius: $in-border-radius;
+  padding: $in-padding-x $in-padding-y;
+  margin-top: 200px;
+
+  > input {
+    background-color: $body-bg;
+    @include bordering([bottom], thin, $border-color);
+    @include bordering-delete([left top right]);
+  }
+}

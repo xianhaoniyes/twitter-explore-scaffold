@@ -1,4 +1,32 @@
-@mixin heading($font-size) {
-  margin-top: 0;
-  font-size: $font-size;
+// @mixin heading($font-size) {
+//   margin-top: 0;
+//   font-size: $font-size;
+// }
+
+@mixin bordering($borders, $border-width, $border-color) {
+  @each $border in $borders {
+    border-#{$border}: solid;
+  }
+
+  border-width: $border-width;
+  border-color: $border-color;
+}
+
+@mixin bordering-delete($borders) {
+  @each $border in $borders {
+    border-#{$border}: none;
+  }
+  outline: none;
+}
+
+@mixin btn-variant($color, $bg-color, $border-color, $width) {
+  color: $color;
+  text-align: center;
+  background-color: $bg-color;
+  padding: $btn-padding-y $btn-padding-x;
+  border: solid;
+  border-color: $border-color;
+  border-width: thin;
+  width: $width;
+  border-radius: 80px;
 }
